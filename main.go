@@ -1,6 +1,6 @@
 package main
 
-import "tcp-proxy/cmd"
+import "github.com/Yunsang-Jeong/tcp-goproxy/cmd"
 
 func main() {
 	start := &cmd.StartCmd{}

@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"tcp-proxy/pkg/handler"
+	"github.com/Yunsang-Jeong/tcp-goproxy/pkg/handler"
 
 	"github.com/spf13/cobra"
 )

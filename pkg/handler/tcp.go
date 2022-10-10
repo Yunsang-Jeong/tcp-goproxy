@@ -4,7 +4,7 @@ import (
 	"log"
 	"net"
 
-	"tcp-proxy/pkg/proxy"
+	"github.com/Yunsang-Jeong/tcp-goproxy/pkg/proxy"
 
 	"github.com/fatih/color"
 )

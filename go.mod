@@ -1,4 +1,4 @@
-module tcp-proxy
+module github.com/Yunsang-Jeong/tcp-goproxy
 
 go 1.19
 
