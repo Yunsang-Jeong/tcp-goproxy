@@ -5,12 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "start",
+      "name": "start-ftp",
       "type": "go",
       "request": "launch",
       "mode": "debug",
       "program": "${workspaceFolder}",
-      "args": [ "start" ]
+      "args": [ "start", "read-only-ftp" ]
     }
   ]
 }

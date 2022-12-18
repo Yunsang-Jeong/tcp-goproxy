@@ -2,15 +2,20 @@ package cmd
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/spf13/cobra"
 )
 
+type flag struct {
+	shorten      string
+	defaultValue string
+	description  string
+	requirement  bool
+}
+
 var RootCmd = &cobra.Command{
 	Use:           "tcproxy",
-	Short:         "TCP-Proxy",
-	Long:          "TCP-Proxy",
+	Long:          "tcproxy is general purpose proxy.",
 	SilenceErrors: true,
 }
 
@@ -28,6 +33,20 @@ func Execute() {
 
 	if err := RootCmd.Execute(); err != nil {
 		fmt.Println(err)
-		os.Exit(1)
+	}
+}
+
+func cobraFlagRegister(c *cobra.Command, flags map[string]flag) {
+	for name, flag := range flags {
+		c.Flags().StringP(
+			name,
+			flag.shorten,
+			flag.defaultValue,
+			flag.description,
+		)
+
+		if flag.requirement {
+			c.MarkFlagRequired(name)
+		}
 	}
 }
